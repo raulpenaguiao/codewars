@@ -1,0 +1,114 @@
+/*
+Index
+ -- Box Model Hack
+ -- Clear fix hack
+ - Base styles
+ - Layout
+ -- text
+ - Additional styles
+ -- lists
+ -- nav list
+ -- header layout
+ -- middle section
+ -- volunteer section
+ -- footer
+ -- misc
+ -- links and buttons
+ -- images
+ -- columns
+ */
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+clear: both;
+}
+
+
+.cf:before,
+.cf:after {
+content: "";
+display: table;
+}
+.cf:after {
+clear: both;
+}
+.cf {
+clear: both;
+*zoom: 1;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: beige;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  padding: 50px;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+h1 {
+  width: fit-content;
+  margin: 50px auto;
+  font-size: 4.5rem;
+}
+
+
+form {
+  border: 2px solid black;
+  max-width: 900px;
+  margin: 200px auto;
+  padding: 25px;
+  font-size: 2.5rem;
+  height: 9.8rem;
+}
+
+p {
+  width: fit-content;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  float: right;
+  background-color: gray;
+  height: 4.3rem;
+}
+
+p:hover {
+  background-color: darkgray;
+  cursor: pointer;
+}
+
+p > ::selection {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+h2 {
+  width: fit-content;
+  margin: 100px auto;
+  font-size: 2.5rem;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

@@ -20,3 +20,23 @@ function mostFrequentDays(year){
       }
     }
   }
+
+
+const btn = document.querySelector("p");
+const form_year = document.querySelector("input");
+const ans = document.querySelector("h2")
+
+
+btn.addEventListener('click', () => {
+  let year = parseInt(form_year.value)
+  if(isNaN(year) || typeof year === "undefined"){
+    ans.innerHTML = "Invalid value"
+  } else{
+    let arr = mostFrequentDays(year)
+    ans.innerHTML = arr[0]
+    if(arr.length == 2){
+      ans.innerHTML += " and "
+      ans.innerHTML += arr[1]
+    }
+  }
+})
