@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ls
 echo -n "please input folder name: "
 read foldername
 echo "your foldername is "

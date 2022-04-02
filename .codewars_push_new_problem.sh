@@ -1,6 +1,5 @@
 echo "Which folder do you want to push: "
 read foldername
-echo $foldername
 echo "Which git message do you want to leave: "
 read message
 x="/assets/js/main.js"
