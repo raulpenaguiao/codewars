@@ -23,11 +23,14 @@ let factor = function(str){
   return str;
 }
 
-
 var decodeBits = function(bits){
     // ToDo: Accept 0's and 1's, return dots, dashes and spaces
+    let k = bits.length, j = 0;
+    while(bits[k-1] === "0") k-= 1;
+    while(bits[j] === "0") j++;
+    let newBits = bits.slice(j, k);
     let dashB = /111/, dotB = /1/, spaceB = /0000000/, nexB = /0/;
-    let shortBits = factor(bits);
+    let shortBits = factor(newBits);
     return shortBits.replace(/111/g, '-').replace(/1/g, '.').replace(/0000000/g, ' $ ').replace(/000/g, ' ').replace(/0/g, '');
 }
 
