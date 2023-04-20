@@ -1,0 +1,3 @@
+def lovefunc( flower1, flower2 ):
+    return not(flower1%2 == flower2%2)
+    # ...
